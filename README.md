@@ -24,3 +24,11 @@ rather than keep the code uniform.
 
 This may be recreated in a new repo utilizing stringent TDD practices as a way to refactor the
 code and ensure that the program is both flexible and loosely coupled. 
+
+**********************************************************************************************
+
+I'm not going to bother licensing this but if I did it would be under the MIT license. Feel
+free to use any and all of this code to your hearts content, I'm not responsible for anything 
+that happens if you do. Hopefully it's easy enough to understand that you don't need a 
+walkthrough if you do decide to use it since under Clean Code principles there is little in 
+the way of comments describing what the code does.
