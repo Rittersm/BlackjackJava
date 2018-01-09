@@ -19,3 +19,8 @@ variables for user inputs. These could have been achieved in a more consistent w
 the point of this code was to experiment with different tools available in Java so any 
 irregularities and inconsistencies are there because I wanted to explore different features
 rather than keep the code uniform.
+
+**********************************************************************************************
+
+This may be recreated in a new repo utilizing stringent TDD practices as a way to refactor the
+code and ensure that the program is both flexible and loosely coupled. 
