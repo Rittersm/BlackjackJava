@@ -8,6 +8,8 @@ import java.util.Scanner;
 // That would allow me to add more AI players without much difficulty.
 // As it is now, it's rigid and not great code for the time being.
 
+// YOU FORGOT TO ADD SHIFTING ACE VALUES AND SPLITTING!!!
+
 public class Dealer {
 
     private Player player;
@@ -53,8 +55,8 @@ public class Dealer {
 
     private void dealNewHand(){
         emptyPlayerAndDealerHands();
-        hit();
-        hit();
+        hit(player);
+        hit(player);
         dealerHit();
         dealerHit();
         revealPlayerAndDealerCards();
@@ -65,7 +67,8 @@ public class Dealer {
         dealPlayerHand.emptyHand();
     }
 
-    private void hit() {
+    //Dealable interface will now allow me to eliminate the dealerHit method and use this for both player and dealer.
+    private void hit(Player player) {
         player.hit(shoe.dealNextCard());
     }
 
@@ -112,7 +115,7 @@ public class Dealer {
                 player.updatePlayerBankWithBetResuts(-1);
                 player.adjustPlayerBetForDoubleDown(2);
                 System.out.println("Your New Bet: "+player.getPlayerBet());
-                hit();
+                hit(player);
                 System.out.println("Your Hand: " + player.getHand());
             }
         }
@@ -131,7 +134,7 @@ public class Dealer {
         int playerAction = player.playerAction();
         while (playerAction != STAY && !player.getHand().handIsBust()) {
             if (playerAction == HIT) {
-                hit();
+                hit(player);
                 System.out.println(player.getHand());
                 bustCheck();
                 gameCycle();
