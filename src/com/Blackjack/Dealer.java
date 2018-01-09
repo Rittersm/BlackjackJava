@@ -6,6 +6,7 @@ import java.util.Scanner;
 // Need to break it down further, maybe into another class and
 // maybe incorporate an interface for "Dealable" to handle some of the dealer responsibilities.
 // That would allow me to add more AI players without much difficulty.
+// As it is now, it's rigid and not great code for the time being.
 
 public class Dealer {
 
