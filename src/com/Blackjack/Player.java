@@ -45,6 +45,8 @@ public class Player {
         hand.addCard(card);
     }
 
+    //DO NOT ALLOW BETS LARGER THAN THE PLAYER BANK!
+
     public boolean hasOptionToDoubleDown(){
         return hand.getValueOfHand() <= 11 && hand.getValueOfHand() >= 9;
     }
