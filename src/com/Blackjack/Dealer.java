@@ -2,6 +2,11 @@ package com.Blackjack;
 
 import java.util.Scanner;
 
+// This is an ugly ass class, way too many methods and the methods are way too long.
+// Need to break it down further, maybe into another class and
+// maybe incorporate an interface for "Dealable" to handle some of the dealer responsibilities.
+// That would allow me to add more AI players without much difficulty.
+
 public class Dealer {
 
     private Player player;
