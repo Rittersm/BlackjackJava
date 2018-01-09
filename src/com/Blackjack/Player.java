@@ -6,7 +6,7 @@ public class Player {
 
     public String playerName;
     private Hand hand;
-    public double playerBank;
+    private double playerBank;
     public double playerBet;
 
 
@@ -20,6 +20,8 @@ public class Player {
     private final static int HIT = 1;
     private final static int STAY = 2;
 
+
+    // This needs to be extracted into a few separate methods. Ugly code.
     public int playerAction(){
         Scanner choice = new Scanner(System.in);
         System.out.print("Would you like to hit(1) or stay(2)?:");
@@ -44,10 +46,7 @@ public class Player {
     }
 
     public boolean hasOptionToDoubleDown(){
-        if (hand.getValueOfHand() <= 11 && hand.getValueOfHand() >=9)
-           return true;
-        else
-            return false;
+        return hand.getValueOfHand() <= 11 && hand.getValueOfHand() >= 9;
     }
 
     public void adjustPlayerBetForDoubleDown(double betMultiplier){
@@ -67,12 +66,7 @@ public class Player {
     }
 
     public boolean isNotBankrupt(){
-        if(0 < getPlayerBank()){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return 0 < getPlayerBank();
     }
 
     public double getPlayerBet(){
